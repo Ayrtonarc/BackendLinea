@@ -1,6 +1,7 @@
 // graphql/schemas/index.js
 
 const { gql } = require('apollo-server-express');
+const apiType = require('./cbp');
 
 const rootType = gql`
  type Query {
@@ -12,4 +13,7 @@ const rootType = gql`
 
 `;
 
-module.exports = [rootType];
+module.exports = [
+    rootType,
+    apiType
+];

@@ -1,3 +1,7 @@
 // graphql/resolvers/index.js
 
-module.exports = [];
+const cbpResolvers = require('./cbp');
+
+module.exports = [
+    cbpResolvers,
+];
