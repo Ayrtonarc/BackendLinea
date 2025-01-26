@@ -1,4 +1,5 @@
 const axios = require('axios');
+const langManager = require('../../utils/langManager');
 
 const resolvers = {
   Query: {
@@ -24,7 +25,7 @@ const resolvers = {
         }));
       } catch (error) {
         console.error('Error fetching wait times:', error.message);
-        throw new Error('Failed to fetch wait times');
+        throw new Error(langManager("FAILED_FETCH", lang));
       }
     },
   },
